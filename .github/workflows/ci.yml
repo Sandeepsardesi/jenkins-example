@@ -46,7 +46,7 @@ jobs:
           echo "Running JobC with runId=${{ needs.preparation.outputs.runId }}"
 
   integration:
-    # runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     needs: [jobA, jobB, jobC]
     steps:
       - name: Integration
